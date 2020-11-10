@@ -1,0 +1,139 @@
+html,
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: linear-gradient(to right, #f23d3d, #ff0098);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin: 0 15px 0 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.font {
+  font-family: "Ubuntu";
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav {
+  grid-area: nav;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+}
+
+.app-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.app-main {
+  display: grid;
+  grid-template-rows: 10% 50% 30%;
+  grid-template-areas: "nav" "input" "output";
+  place-items: center;
+}
+
+.app-light {
+  background: #f2f2f2;
+}
+
+.app-dark {
+  background: #222222;
+}
+
+.button-main {
+  background: #f23d3d;
+}
+
+.app-input-wrap {
+  background: linear-gradient(to right, #f23d3d, #ff0098);
+  padding: 5px;
+  grid-area: input;
+  display: grid;
+  grid-template-areas: "stdin" "app-action-button";
+  min-width: 45%;
+  max-width: 45%;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.app-input {
+  grid-area: stdin;
+  background: #222222;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+}
+
+.app-action-button {
+  grid-area: app-action-button;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.app-action-button:hover {
+  background: #22222227;
+}
+
+.app-action-button:active {
+  background: #2222227e;
+}
+
+.app-output-wrap {
+  grid-area: output;
+  background: linear-gradient(to right, #f23d3d, #ff0098);
+  padding: 5px;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-areas: "output";
+  min-width: 45%;
+  max-width: 45%;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.app-output {
+  grid-area: output;
+  background: #222222;
+  color: #ffffff;
+  border: none;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+  overflow-y: scroll;
+}
